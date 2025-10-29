@@ -11,6 +11,7 @@ defmodule SpendorWeb.Router do
   end
 
   pipeline :api do
+    # `:accepts` determines the format of view (json)
     plug :accepts, ["json"]
   end
 
@@ -18,6 +19,8 @@ defmodule SpendorWeb.Router do
     pipe_through :api
 
     get "/", PageController, :api_home
+    post "/non_user/create", NonUserController, :create
+    get "/non_user/:id", NonUserController, :show
   end
 
   scope "/", SpendorWeb do
