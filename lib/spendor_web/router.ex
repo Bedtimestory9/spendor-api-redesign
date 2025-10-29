@@ -14,6 +14,12 @@ defmodule SpendorWeb.Router do
     plug :accepts, ["json"]
   end
 
+  scope "/api", SpendorWeb do
+    pipe_through :api
+
+    get "/", PageController, :api_home
+  end
+
   scope "/", SpendorWeb do
     pipe_through :browser
 

@@ -7,7 +7,7 @@ import Config
 # Run `mix help test` for more information.
 config :spendor, Spendor.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "Aa!856330330",
   hostname: "localhost",
   database: "spendor_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
