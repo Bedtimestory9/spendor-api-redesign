@@ -19,6 +19,7 @@ defmodule SpendorWeb.Router do
     pipe_through :api
 
     get "/", PageController, :api_home
+    get "/categories", CategoryController, :index
     post "/non_user/create", NonUserController, :create
     get "/non_user/:id", NonUserController, :show
   end

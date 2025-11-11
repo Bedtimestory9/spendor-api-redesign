@@ -14,5 +14,6 @@ defmodule Spendor.NonUser do
     |> cast(attrs, [:hashed_app_id])
     |> validate_required([:hashed_app_id])
     |> unique_constraint([:hashed_app_id])
+    |> validate_length(:hashed_app_id, min: 10, max: 30)
   end
 end
